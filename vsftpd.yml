@@ -1,0 +1,10 @@
+---
+- name: deploying vsftpd
+  hosts: dev
+  become: true
+
+  tasks:
+  - name: installing vsftpd package
+    yum:
+      name: vsftpd
+      state: present
