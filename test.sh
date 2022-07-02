@@ -1,2 +1,5 @@
 #!/bin/bash
-echo "Nothing to worry";
+for i in `seq 1 100`
+do
+    echo "$i times";
+done
