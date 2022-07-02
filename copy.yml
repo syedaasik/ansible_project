@@ -1,0 +1,9 @@
+---
+- hosts: dev
+  gather_facts: true
+
+  tasks:
+  - name: Just to copy
+    ansible.builtin.copy:
+      src: /etc/fstab
+      dest: /tmp/fstab.master
