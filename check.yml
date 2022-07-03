@@ -1,0 +1,13 @@
+---
+- name: checking the config params
+  hosts: dev
+  gather_facts: true
+
+  tasks:
+  - name: checking the binbash users
+    shell: 'grep bash /etc/passwd'
+    register: results
+
+  - name: debugging
+    debug:
+      var: results.stdout
