@@ -6,8 +6,8 @@
   tasks:
   - name: checking the binbash users
     shell: 'grep bash /etc/passwd'
-    register: results
+    register: result
 
   - name: debugging
     debug:
-      var: results.stdout
+      var: result.stdout
